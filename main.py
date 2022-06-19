@@ -1,7 +1,7 @@
 
 import os
 import sys
-#os.system("pip install aiohttp")
+os.system("pip install aiohttp")
 os.system("pip install jishaku")
 os.system("pip install requests")
 import ast
@@ -18,34 +18,31 @@ from discord.ext import commands
 os.system("clear")
 
 f = open("alive.txt", "r")
-# launch = f.read()
-# if launch == "true":
-#    print("starting sniper")
-# else:
-#   sys.exit()
+launch = f.read()
+if launch == "true":
+  print("starting sniper")
+else:
+  sys.exit()
 
 
 
 ip = requests.get('https://api.ipify.org/').text
 print(ip)
-vanity_list = []
+vanity_list = ["vanity1", "vanity2", "you can add multiple vanities"]
 delay = 0
 sleep = 0
-console = "960162042503917658"
-guild = "959795104372125756"
+console = "960162042503917658" # channel id to log events
+guild = "959795104372125756" # guild id where u wanna claim the vanity 
 shards = 1 
 
 
 #os.system("clear")
 
 
-tkn = ""
+tkn = "" # yo bot's tucan
 prefix = "."
 
 
-
-
-# sniper 1 - 
 
 intents = discord.Intents.all()
 intents.members = True
